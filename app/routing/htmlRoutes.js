@@ -1,10 +1,7 @@
-function htmlRoutes() {
+function htmlRoutes(app) {
     var express = require("express");
     var bodyParser = require("body-parser");
     var path = require("path");
-    var PORT = 4000;
-    var app = express();
-
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({
@@ -14,9 +11,6 @@ function htmlRoutes() {
     app.use(bodyParser.json({
         type: "application/vnd.api+json"
     }));
-    app.listen(PORT, function () {
-        console.log("App listening on PORT " + PORT);
-    });
 
     app.get("/", function (req, res) {
 
@@ -27,27 +21,9 @@ function htmlRoutes() {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
-    app.get("/styles/cyborgcss", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/cyborg.css"));
-    });
+    // pushes CSS and other files
+    app.use(express.static(path.join(__dirname, '../public/assets/')));
 
-    app.get("/styles/stylecss", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/style.css"));
-    });
-
-    app.get("/styles/chosencss", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/chosen.css"));
-    });
-
-    	
-
-  app.get("/styles/chosen-sprite@2x.png", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/chosen-sprite@2x.png"));
-    });
-
-    app.get("/styles/chosenjquery", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/chosen.jquery.min.js"));
-    });
 }
 
 module.exports = htmlRoutes;
