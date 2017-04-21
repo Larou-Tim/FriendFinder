@@ -24,7 +24,7 @@ function apiRoutes(app) {
     // ---------------------TEST---------------
     var bob = new friendsMaker("Bob", "http://cdn.akc.org/Marketplace/Breeds/Samoyed_SERP.jpg", [5, 3, 4, 4, 5, 1, 2, 2, 4, 1]);
     bob.newFriend();
-    console.log(bob.closestMatch);
+  
     // ---------------------------------------
 
     // ---------------------------------------
