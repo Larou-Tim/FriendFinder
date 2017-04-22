@@ -16,8 +16,8 @@ var friends = [
     },
 
     {
-        "name": "Jill",
-        "photo": "http://cdn.akc.org/Marketplace/Breeds/Samoyed_SERP.jpg",
+        "name": "Sally",
+        "photo": "https://s-media-cache-ak0.pinimg.com/originals/0d/a0/a9/0da0a9469b4af1cc51b0ccfb6fd6f9d6.jpg",
         "scores": [2, 1, 4, 4, 5, 1, 2, 5, 4, 1]
     }
 ];
