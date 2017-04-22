@@ -5,7 +5,7 @@
 
 var htmlPath = require("./app/routing/htmlRoutes.js");
 var apiPath = require("./app/routing/apiRoutes.js");
-var PORT = 4000;
+var PORT = process.env.PORT || 4000;
 
 // express.static
 var express = require("express");
