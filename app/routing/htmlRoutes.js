@@ -21,7 +21,6 @@ function htmlRoutes(app) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
-    // pushes CSS and other files
     app.use(express.static(path.join(__dirname, '../public/assets/')));
 
 }
